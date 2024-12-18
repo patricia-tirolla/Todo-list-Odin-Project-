@@ -1,5 +1,4 @@
-import { myProjects, deleteTodo, deleteProject, moveTodoBetweenProjects, addTodoToProject, addNewProjectToList } from "./projects";
-import { Todo } from "./todo";
+import { myProjects, Todo, deleteTodo, deleteProject, moveTodoBetweenProjects, addTodoToProject, addNewProjectToList } from "./projects";
 import { getProjectsFromLocalStorage } from "./localStorage";
 
 
