@@ -1,5 +1,4 @@
-import { myProjects, addNewProjectToList, addTodoToProject, moveTodoBetweenProjects, deleteTodo, deleteProject } from "../src/projects.js";
-import { Todo } from "../src/todo.js";
+import { myProjects, Todo, addNewProjectToList, addTodoToProject, moveTodoBetweenProjects, deleteTodo, deleteProject } from "../src/projects.js";
 
 // ----------------------- Testing the Projects functions
 describe("Project", () => {

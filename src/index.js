@@ -1,6 +1,8 @@
 
 import "./styles/style.css"
-import { showNewTodoModal, closeNewTodoModal, showNewProjectModal, closeNewProjectModal, addNewTodoButton, addNewProjectButton, showWelcomeModal, closeWelcomeModal } from "./modalUI.js";
+import "./styles/dialogs.css"
+import "./styles/templateCards.css"
+import modalFunctions from "./modalUI.js";
 import { displayProjectAndTodoCards } from "./projectsUI.js";
 import { sincLocalStorageWithJs, getProjectsFromLocalStorage } from "./localStorage.js";
 

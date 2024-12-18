@@ -1,0 +1,2 @@
+- Clean the form after submit;
+- Change the background when dragging the cards over the projects;

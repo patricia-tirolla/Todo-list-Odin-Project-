@@ -1,0 +1,77 @@
+aside {
+    grid-area: 2 / 1 / 3 / 2;
+    margin: 10px;
+
+    #start-here {
+        display: flex;
+        align-items: baseline;
+        gap: 10px;
+        margin: 5px;
+        height: fit-content;
+    }
+
+    #welcome-dialog[open] {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        width: 250px;
+        border-radius: 4px;
+        background-color: var(--gray-background);
+        h2 {
+            text-align: center;
+        }
+        p {
+            background-color: white;
+            padding: 10px;
+            border-radius: 4px;
+        }
+        button {
+            width: fit-content;
+            padding: 10px 20px;
+        }
+    }
+
+    #project-dialog {
+        align-items: center;
+        border-radius: 8px;
+        background-color: var(--dialog-background);
+        input {
+            border-radius: 6px;
+            height: 25px;
+        }
+        button {
+            border-radius: 4px;
+            padding: 5px 10px;
+        }
+    }
+
+    #todo-dialog[open] {
+        display: flex;
+        flex-direction: column;
+        background-color: var(--dialog-background);
+        border-radius: 8px;
+        gap: 5px;
+        padding: 16px 30px;
+        input {
+            border-radius: 6px;
+            height: 25px;
+        }
+        button {
+            border-radius: 6px;
+            height: 25px;
+        }
+        select {
+            border-radius: 6px;
+            height: 25px;
+            border: 2px solid black;
+        }
+    }
+
+    .aside-button {
+        padding: 5px 10px;
+        margin: 5px;
+        border: 1px solid gray;
+        border-radius: 6px;
+        font-size: 1em;
+    }    
+}
