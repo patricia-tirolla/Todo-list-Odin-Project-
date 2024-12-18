@@ -1,5 +1,7 @@
 import { myProjects, deleteTodo, deleteProject, moveTodoBetweenProjects, addTodoToProject, addNewProjectToList } from "./projects";
 import { Todo } from "./todo";
+import { getProjectsFromLocalStorage } from "./localStorage";
+
 
 export function doneStatus(todo, e) {
     todo.done = e.target.checked;
@@ -99,14 +101,4 @@ export function displayProjectAndTodoCards() {
         })
         projectsContainer.appendChild(projectClone);
     })
-}
-
-
-
-export function getProjectsFromLocalStorage() {
-    const projects = localStorage.getItem("projects");
-    if (projects === null) {
-        return [];
-    }
-    return JSON.parse(projects);
 }

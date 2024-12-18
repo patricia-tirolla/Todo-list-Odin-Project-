@@ -14,3 +14,11 @@ export function sincLocalStorageWithJs() {
         })
     }
 }
+
+export function getProjectsFromLocalStorage() {
+    const projects = localStorage.getItem("projects");
+    if (projects === null) {
+        return [];
+    }
+    return JSON.parse(projects);
+}
