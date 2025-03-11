@@ -51,8 +51,9 @@ header {
 }
 
 main {
-    display: flex;
     grid-area: 2 / 2 / 3 / 3;
+
+    display: flex;
     padding: 10px;
     background-color: white;
 
@@ -62,19 +63,20 @@ main {
 
         #all-projects-container {
             display: flex;
+            flex-direction: column;
         }
     }
     h3 {
         margin: 0;
-        font-size: 1rem;
+        font-size: 1.2rem;
     }
     h2 {
         margin: 10px;
-        font-size: 1.2rem;
+        font-size: 1.5rem;
     }
     p {
         margin: 0;
-        font-size: 0.8rem;
+        font-size: 1rem;
         font-weight: 400;
     }
 }

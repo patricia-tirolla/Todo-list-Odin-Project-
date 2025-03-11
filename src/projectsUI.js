@@ -103,11 +103,11 @@ export function displayProjectAndTodoCards() {
             let todoTitle = todoCard.querySelector(".todo-title");
             todoTitle.textContent = todo.title;
             todoTitle.addEventListener("click", () => {
-
                 let todoDetails = todoCard.querySelector(".todo-details");
 
                 if (todoDetails) {
                     todoDetails.classList.toggle("enable-display");
+                    todoCard.classList.toggle("todo-card-details-enabled");
                 }
             })
 

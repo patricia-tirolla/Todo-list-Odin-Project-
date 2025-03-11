@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 234px;
+    width: fit-content;
     height: fit-content;
     margin: 10px;
     border: 2px solid gray;
@@ -41,10 +41,11 @@
 
 .todo-card {
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
     gap: 5px;
-    width: 190px;
-    height: 220px;
+    width: 400px;
+    height: fit-content;
     border: 1px solid gray;
     border-radius: 6px;
     padding: 10px;
@@ -58,6 +59,16 @@
 
     .enable-display {
         display: flex;
+        flex-direction: column;
+        gap: 5px;
+        width: 100%;
+        height: fit-content;
+        border: 1px solid gray;
+        border-radius: 6px;
+        padding: 10px;
+        margin: 10px;
+        box-shadow: var(--shadow);
+        background-color: white;
     }
 
     .todo-description {
@@ -69,6 +80,11 @@
 
     button {
         width: fit-content;
+        height: fit-content;
         padding: 2px 20px;
     }
+}
+
+.todo-card-details-enabled {
+    flex-direction: column;
 }
