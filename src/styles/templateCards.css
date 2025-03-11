@@ -9,10 +9,29 @@
     border-radius: 10px;
     background-color: var(--light-gray-background);
 
+    .project-header-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        width: 100%;
+    }
+
     button {
-        border: 1px solid grey;
+        border: grey;
         border-radius: 6px;
+        box-shadow: var(--shadow);
         margin: 5px;
+    }
+
+    .new-todo-plus-button {
+        padding: 0 10px;
+        font-weight: 400;
+        font-size: 2em;
+        margin: 10px;
+        border-radius: 50px;
+        box-shadow: var(--shadow);
+        border: gray;
     }
 }
 
