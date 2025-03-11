@@ -93,11 +93,24 @@ export function displayProjectAndTodoCards() {
             let todoClone = cardTemplate.content.cloneNode(true);
 
             todoClone.querySelector(".todo-card").setAttribute("data-todo-index", todoIndex);
-            todoClone.querySelector(".todo-title").textContent = todo.title;
             todoClone.querySelector(".todo-description").textContent = todo.description;
             todoClone.querySelector(".todo-due-date").textContent = `Due date: ${todo.dueDate}`;
             todoClone.querySelector(".todo-priority").textContent = `Priority: ${todo.priority}`;
             todoClone.querySelector(".done").checked = todo.done;
+
+            let todoCard = todoClone.querySelector(".todo-card");
+
+            let todoTitle = todoCard.querySelector(".todo-title");
+            todoTitle.textContent = todo.title;
+            todoTitle.addEventListener("click", () => {
+
+                let todoDetails = todoCard.querySelector(".todo-details");
+
+                if (todoDetails) {
+                    todoDetails.classList.toggle("enable-display");
+                }
+            })
+
             todoClone.querySelector(".done").onchange = (e) => {
                 doneStatus(myProjects[projectIndex].todos[todoIndex], e);
                 displayProjectAndTodoCards();

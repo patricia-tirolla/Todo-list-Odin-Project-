@@ -17,6 +17,10 @@
         width: 100%;
     }
 
+    .project-card-selected {
+        box-shadow: var(--selected);
+    }
+
     button {
         border: grey;
         border-radius: 6px;
@@ -35,10 +39,6 @@
     }
 }
 
-.project-card-selected {
-    box-shadow: var(--selected);
-}
-
 .todo-card {
     display: flex;
     flex-direction: column;
@@ -51,6 +51,14 @@
     margin: 10px;
     box-shadow: var(--shadow);
     background-color: white;
+
+    .disable-display {
+        display: none;
+    }
+
+    .enable-display {
+        display: flex;
+    }
 
     .todo-description {
         height: 5em;

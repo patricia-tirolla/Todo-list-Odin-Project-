@@ -72,15 +72,15 @@
         <template id="todo-card-template">
             <div class="todo-card">
                 <h3 class="todo-title"></h3>
-                <p class="todo-description"></p>
-                <p class="todo-due-date"></p>
-                <p class="todo-priority"></p>
-
-                <div class="status-container">
-                    <input class="done" name="done" type="checkbox">
-                    <label>Done</label>
+                <div class="todo-details disable-display">
+                    <p class="todo-description"></p>
+                    <p class="todo-due-date"></p>
+                    <p class="todo-priority"></p>
+                    <div class="status-container">
+                        <input class="done" name="done" type="checkbox">
+                        <label>Done</label>
+                    </div>
                 </div>
-
                 <button class="todo-delete-button">Delete</button>
             </div>
         </template>
