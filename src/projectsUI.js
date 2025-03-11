@@ -53,6 +53,10 @@ export function displayProjectAndTodoCards() {
             }
         }
 
+        if (project.title === "Default Project") {
+            projectCard.querySelector(".project-delete-button").style.display = "none";
+        }
+
         // handle project selection when clicked
         projectCard.addEventListener("click", () => {
             document.querySelectorAll(".project-card").forEach(card => card.classList.remove("project-card-selected"));
