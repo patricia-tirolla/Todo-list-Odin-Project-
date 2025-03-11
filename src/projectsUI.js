@@ -7,15 +7,20 @@ export function doneStatus(todo, e) {
     localStorage.setItem("projects", JSON.stringify(myProjects));
 }
 
+let selectedProjectIndex = null;
+
 // ----------------------- Create Todos and Projects objects with the user inputs
 export function createTodo() {
     let todoTitle = document.getElementById("todo-title");
     let todoDescription = document.getElementById("todo-description");
     let todoDueDate = document.getElementById("todo-due-date");
     let todoPriority = document.getElementById("todo-priority");
-    let options = document.getElementById("options")
+    if (selectedProjectIndex === null) {
+        alert("Please select a project before adding a todo.");
+        return;
+    }
 
-    addTodoToProject(options.value, new Todo(todoTitle.value, todoDescription.value, todoDueDate.value, todoPriority.value, false))
+    addTodoToProject(selectedProjectIndex, new Todo(todoTitle.value, todoDescription.value, todoDueDate.value, todoPriority.value, false))
 }
 
 export function createProject() {
@@ -28,37 +33,46 @@ export function createProject() {
 export function displayProjectAndTodoCards() {
 
     // ----------------------- Display the projects
-    let options = document.getElementById("options");
     let projectsContainer = document.getElementById("all-projects-container");
     projectsContainer.innerHTML = "";
-    options.innerHTML = "";
-
 
     let dragged = null;
     getProjectsFromLocalStorage().forEach((project, projectIndex) => {
-        let optionElement = document.createElement("option");
-        optionElement.value = projectIndex;
-        optionElement.textContent = project.title;
-        options.appendChild(optionElement);
 
         const projectTemplate = document.getElementById("project-card-template");
         let projectClone = projectTemplate.content.cloneNode(true);
 
-        projectClone.querySelector(".project-card").setAttribute("data-index", projectIndex);
-        projectClone.querySelector("h2").textContent = project.title;
-        projectClone.querySelector(".project-delete-button").onclick = () => {
+        let projectCard = projectClone.querySelector(".project-card");
+
+        projectCard.setAttribute("data-index", projectIndex);
+        projectCard.querySelector("h2").textContent = project.title;
+        projectCard.querySelector(".project-delete-button").onclick = () => {
             if (projectIndex != 0) {
                 deleteProject(projectIndex);
                 displayProjectAndTodoCards();
             }
         }
+
+        // handle project selection when clicked
+        projectCard.addEventListener("click", () => {
+            document.querySelectorAll(".project-card").forEach(card => card.classList.remove("project-card-selected"));
+            projectCard.classList.add("project-card-selected");
+            selectedProjectIndex = projectIndex;
+        })
+
+        // add a plus button inside each project, to add a new todo
+        projectClone.querySelector(".new-todo-plus-button").onclick = () => {
+            const todoModal = document.getElementById("todo-dialog");
+            todoModal.show();
+        }
+
         // allows the todos to drag over the projects
-        projectClone.querySelector(".project-card").addEventListener("dragover", (e) => {
+        projectCard.addEventListener("dragover", (e) => {
             e.preventDefault();
         })
 
         // select the project to get the todo dragged
-        projectClone.querySelector(".project-card").addEventListener("drop", (e) => {
+        projectCard.addEventListener("drop", (e) => {
             e.preventDefault();
             let fromIndex = dragged.closest(".project-card").dataset.index;
             let todoIndex = dragged.dataset.todoIndex;

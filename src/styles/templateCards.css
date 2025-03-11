@@ -16,6 +16,10 @@
     }
 }
 
+.project-card-selected {
+    box-shadow: var(--selected);
+}
+
 .todo-card {
     display: flex;
     flex-direction: column;
