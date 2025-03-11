@@ -1,0 +1,101 @@
+<head><script defer src="main.js"></script></head><body class="blur">
+    <div id="wrap-all">
+        <header>
+            <h1>To-do list</h1>
+        </header>
+        <aside>
+            <section id="welcome">
+                <div id="start-here">
+                    <h3>Start here</h3>
+                </div>
+                <button class="welcome-button aside-button">Welcome!</button>
+                <dialog id="welcome-dialog">
+                    <h2 id="welcome-title">Welcome to your<br> "To-do list"</h2>
+                    <p>Click the "New Todo" button to add a new "To-do" task to your default projetcs.<br><br>
+                        You can clickk the "New Project" button to add new projects.<br><br>
+                        Select the project you wish to add a new To-do task inside it.<br><br>
+                        You can also drag your "To-do" task to another project when you wish to move them.<br><br>
+                        Enjoy it!
+                    </p>
+
+                    <button type="button" id="close-welcome-button" formmethod="dialog">Close</button>
+                </dialog>
+            </section>
+            <section id="add-new-project">
+                <button class="new-project-button aside-button">New Project</button>
+                <dialog id="project-dialog">
+                    <form id="new-project-form">
+                        <label for="project-title">Title</label>
+                        <input id="project-title" type="text" name="project-title">
+
+                        <button type="button" id="cancel-project-button" formmethod="dialog">Cancel</button>
+                        <button type="submit" id="add-project-button">Add</button>
+                    </form>
+                </dialog>
+            </section>
+
+            <section id="add-new-todo">
+                <button class="new-todo-button aside-button">New Todo</button>
+                <dialog id="todo-dialog">
+                    <form id="new-todo-form"></form>
+
+                    <label for="todo-title">Title</label>
+                    <input id="todo-title" type="text" name="todo-title">
+
+                    <label for="todo-description">Description</label>
+                    <input id="todo-description" type="text" name="description">
+
+                    <label for="todo-due-date">Due Date</label>
+                    <input id="todo-due-date" type="date" name="due-date">
+
+                    <label for="todo-priority">Priority</label>
+                    <select id="todo-priority" type="text" name="priority">
+                        <option value="high">High - do it asap!</option>
+                        <option value="medium">Medium - do it by due date!</option>
+                        <option value="low">Low - do it any time!</option>
+                    </select>
+
+                    <button type="button" id="cancel-button" formmethod="dialog">Cancel</button>
+                    <button type="submit" id="add-todo-button">Add</button>
+                </dialog>
+            </section>
+        </aside>
+        <main>
+            <div id="projects-container">
+                <div id="all-projects-container">
+                    <!-- New projects go here -->
+                </div>
+            </div>
+        </main>
+
+        <!-- -------------- Todos Templates -->
+        <template id="todo-card-template">
+            <div class="todo-card">
+                <h3 class="todo-title"></h3>
+                <div class="todo-details disable-display">
+                    <p class="todo-description"></p>
+                    <p class="todo-due-date"></p>
+                    <p class="todo-priority"></p>
+                    <div class="status-container">
+                        <input class="done" name="done" type="checkbox">
+                        <label>Done</label>
+                    </div>
+                </div>
+                <button class="todo-delete-button">Delete</button>
+            </div>
+        </template>
+
+        <!-- --------------- Projects templates -->
+        <template id="project-card-template">
+            <div class="project-card">
+                <div class="project-header-container">
+                    <h2 class="project-title"></h2>
+                    <button class="new-todo-plus-button">+</button>
+                </div>
+                <div class="todos-list"></div>
+                <button class="project-delete-button">Delete Project</button>
+
+            </div>
+        </template>
+    </div>
+</body>
