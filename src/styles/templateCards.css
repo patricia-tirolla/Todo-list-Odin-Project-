@@ -54,6 +54,10 @@
     box-shadow: var(--shadow);
     background-color: white;
 
+    @media (max-width: 768px) {
+        width: 200px;
+      }
+
     .disable-display {
         display: none;
     }
