@@ -70,17 +70,16 @@
             <div class="todo-card">
                 <div class="todo-header">
                     <h3 class="todo-title"></h3>
-                    <i class="fa-solid fa-trash todo-delete-button"></i>
+                    <div class="interaction-container">
+                        <i class="fa-solid fa-trash todo-delete-button"></i>
+                        <input class="done" name="done" type="checkbox">
+                    </div>
                 </div>
 
                 <div class="todo-details disable-display">
                     <p class="todo-description"></p>
                     <p class="todo-due-date"></p>
                     <p class="todo-priority"></p>
-                    <div class="status-container">
-                        <input class="done" name="done" type="checkbox">
-                        <label>Done</label>
-                    </div>
                 </div>
             </div>
         </template>

@@ -58,7 +58,8 @@ export function displayProjectAndTodoCards() {
         }
 
         // handle project selection when clicked
-        projectCard.addEventListener("click", () => {
+        projectCard.addEventListener("click", (e) => {
+            e.stopPropagation();
             document.querySelectorAll(".project-card").forEach(card => card.classList.remove("project-card-selected"));
             projectCard.classList.add("project-card-selected");
             selectedProjectIndex = projectCard.dataset.index;
@@ -115,6 +116,7 @@ export function displayProjectAndTodoCards() {
             })
 
             todoClone.querySelector(".done").onchange = (e) => {
+                e.stopPropagation();
                 doneStatus(myProjects[projectIndex].todos[todoIndex], e);
                 displayProjectAndTodoCards();
             }
