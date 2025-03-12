@@ -103,7 +103,9 @@ export function displayProjectAndTodoCards() {
 
             let todoTitle = todoCard.querySelector(".todo-title");
             todoTitle.textContent = todo.title;
-            todoTitle.addEventListener("click", () => {
+
+            let todoHeader = todoCard.querySelector(".todo-header")
+            todoHeader.addEventListener("click", () => {
                 let todoDetails = todoCard.querySelector(".todo-details");
 
                 if (todoDetails) {
