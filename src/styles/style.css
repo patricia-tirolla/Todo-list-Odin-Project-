@@ -47,7 +47,7 @@ h1 {
     font-size: 3em;
     font-weight: 900;
     color: #463931;
-    text-shadow: 0 0 10px #7B554A, 0 0 20px #7B554A, 0 0 30px #7B554A;
+    text-shadow: 0 0 10px var(--light-beije), 0 0 20px #7B554A, 0 0 30px #7B554A;
 }
 
 main {
@@ -59,6 +59,10 @@ main {
 
     #all-projects-container {
         display: flex;
+
+        @media (max-width: 768px) {
+            flex-direction: column;
+          }
     }
 
     h3 {
