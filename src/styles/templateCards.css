@@ -54,10 +54,6 @@
     box-shadow: var(--shadow);
     background-color: white;
 
-    @media (max-width: 425px) {
-        width: 200px;
-      }
-
     .disable-display {
         display: none;
     }
@@ -74,6 +70,10 @@
         margin: 10px;
         box-shadow: var(--shadow);
         background-color: white;
+
+        @media (max-width: 425px) {
+            width: 250px;
+        }
     }
 
     .todo-header {
@@ -156,4 +156,20 @@ i:hover {
     left: 50%;
     transform: translate(-50%, -50%);
     font-weight: bold;
+}
+
+@media (max-width: 425px) {
+    .project-card {
+        display: flex;
+        align-items: center;
+        width: calc(100% - 20px);
+        box-sizing: border-box;
+        margin: 10px auto;
+    }
+
+    .todo-card {
+        width: 300px;
+        box-sizing: border-box;
+        margin: auto;
+    }
 }
