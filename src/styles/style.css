@@ -64,10 +64,6 @@ main {
 
     #all-projects-container {
         display: flex;
-
-        @media (max-width: 768px) {
-            flex-direction: column;
-        }
     }
 
     h3 {
@@ -122,4 +118,10 @@ button:hover {
 .todo-card:hover {
     cursor: pointer;
     box-shadow: var(--shadow-hover);
+}
+
+@media (max-width: 768px) {
+    #all-projects-container {
+        flex-direction: column;
+    }
 }
