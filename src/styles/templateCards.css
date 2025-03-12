@@ -103,14 +103,21 @@
     flex-direction: column;
 }
 
+/* ------------------------ hover actions */
 i:hover {
     box-shadow: var(--shadow-hover);
     color: var(--hover-red);
+    font-size: 1.3em;
+    padding: 7px;
 }
 
 .project-delete-button:hover {
     color: var(--hover-red);
     font-weight: 900;
+}
+
+.todo-card:hover {
+    background-color: var(--buttons-background-color);
 }
 
 .add-todo-plus-button:hover {
