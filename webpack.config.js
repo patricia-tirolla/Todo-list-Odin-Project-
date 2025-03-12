@@ -16,6 +16,9 @@ module.exports = {
     plugins: [
         new HtmlWebpackPlugin({
             template: "./src/template.html",
+            meta: {
+                viewport: 'width=device-width, initial-scale=1'
+            }
         }),
     ],
     module: {
@@ -32,8 +35,8 @@ module.exports = {
                 test: /\.(png|svg|jpg|jpeg|gif)$/i,
                 type: "asset/resourse",
             },
-            { 
-                test: /\.txt$/, 
+            {
+                test: /\.txt$/,
                 use: "raw-loader",
             },
         ],
