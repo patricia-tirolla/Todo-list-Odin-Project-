@@ -2,16 +2,14 @@
 
 :root {
     --shadow: 2px 2px 5px rgb(197, 194, 194);
-    --shadow-title: 2px 2px 10px rgb(116, 116, 116);
     --shadow-hover: 2px 2px 10px rgb(116, 116, 116);
     --selected: 2px 2px 20px rgb(107, 108, 109);
-    --gray-background: rgb(197, 194, 194);
-    --light-gray-background: rgb(249, 248, 248);
-    --medium-gray-background: #463931;
-    --dialog-background: rgb(197, 194, 194);
-    --buttons-background-color: rgb(223, 222, 222);
-    --dark-background: #272523;
-    --dark-brown-background: #463831;
+    --background-dark: #463931;
+    --background-project-cards: #A87880;
+    --background-aside-and-header: #7B554A;
+    --dialog-background: #B19B8F;
+    --buttons-background-color: #E1D8D5;
+    --light-beije: #E1D8D5;
 }
 
 /* ------------------------ GLOBAL */
@@ -21,15 +19,20 @@ body {
     display: flex;
     justify-content: center;
     margin: 0;
-    background-color: black;
+    background-color: var(--background-dark);
+    color: var(--background-dark)
 }
 
 #wrap-all {
     display: grid;
     grid-template: 1fr 6fr / 200px 5fr;
-    background-color: var(--gray-background);
+    /* background-color: var(--background-aside-and-header); */
     max-height: 100vh;
     overflow: scroll;
+
+    background: #7B554A;
+    background-image: url('https://www.transparenttextures.com/patterns/white-diamond.png');
+    padding: 20px;
 }
 
 header {
@@ -40,12 +43,19 @@ header {
     margin: 5px 20px;
 }
 
+h1 {
+    font-size: 3em;
+    font-weight: 900;
+    color: #463931;
+    text-shadow: 0 0 10px #7B554A, 0 0 20px #7B554A, 0 0 30px #7B554A;
+    }
+
 main {
     grid-area: 2 / 2 / 3 / 3;
 
     display: flex;
     padding: 10px;
-    background-color: white;
+    background-color: var(--light-beije);
 
     #projects-container {
         display: flex;

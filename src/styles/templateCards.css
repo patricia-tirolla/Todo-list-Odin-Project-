@@ -8,7 +8,7 @@
     margin: 10px;
     border: 2px solid gray;
     border-radius: 10px;
-    background-color: var(--light-gray-background);
+    background-color: var(--background-project-cards);
 
     .project-header-container {
         display: flex;
