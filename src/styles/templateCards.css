@@ -54,7 +54,7 @@
     box-shadow: var(--shadow);
     background-color: white;
 
-    @media (max-width: 768px) {
+    @media (max-width: 425px) {
         width: 200px;
       }
 

@@ -34,7 +34,7 @@ body {
     background-image: url('https://www.transparenttextures.com/patterns/white-diamond.png');
     padding: 20px;
 
-    @media (max-width: 768px) {
+    @media (max-width: 425px) {
         grid-template: 1fr 6fr / 100px 5fr;
         padding: 0;
     }
