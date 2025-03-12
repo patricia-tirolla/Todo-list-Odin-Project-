@@ -8,8 +8,10 @@
     --gray-background: rgb(197, 194, 194);
     --light-gray-background: rgb(249, 248, 248);
     --medium-gray-background: #463931;
-    --dialog-background: rgb(125, 117, 111);
+    --dialog-background: rgb(197, 194, 194);
     --buttons-background-color: rgb(223, 222, 222);
+    --dark-background: #272523;
+    --dark-brown-background: #463831;
 }
 
 /* ------------------------ GLOBAL */
@@ -24,30 +26,18 @@ body {
 
 #wrap-all {
     display: grid;
-    grid-template: 1fr 6fr / 150px 5fr;
+    grid-template: 1fr 6fr / 200px 5fr;
     background-color: var(--gray-background);
-    width: 100%;
-    max-width: 1000px;
-    height: fit-content;
     max-height: 100vh;
-
     overflow: scroll;
 }
 
 header {
-    grid-area: 1 / 2 / 2 / 3;
+    grid-area: 1 / 1 / 2 / 3;
 
     display: flex;
     align-items: center;
-
     margin: 5px 20px;
-
-    h1 {
-        padding: 15px 30px;
-        box-shadow: var(--shadow-title);
-        border-radius: 10px;
-    }
-
 }
 
 main {
@@ -59,11 +49,9 @@ main {
 
     #projects-container {
         display: flex;
-        flex-direction: column;
 
         #all-projects-container {
             display: flex;
-            flex-direction: column;
         }
     }
     h3 {

@@ -11,10 +11,11 @@
                 <button class="welcome-button aside-button">Welcome!</button>
                 <dialog id="welcome-dialog">
                     <h2 id="welcome-title">Welcome to your<br> "To-do list"</h2>
-                    <p>Click the "New Todo" button to add a new "To-do" task to your default projetcs.<br><br>
+                    <p>Click the "New To-do" button to add a new task to your default projetcs.<br><br>
                         You can clickk the "New Project" button to add new projects.<br><br>
-                        Select the project you wish to add a new To-do task inside it.<br><br>
-                        You can also drag your "To-do" task to another project when you wish to move them.<br><br>
+                        Select the project you wish to add a new To-do task inside of it, or add it directly inside the
+                        projects, by clicking the "+" button.<br><br>
+                        You can also drag your tasks to another project when you wish to move them.<br><br>
                         Enjoy it!
                     </p>
 
@@ -35,7 +36,7 @@
             </section>
 
             <section id="add-new-todo">
-                <button class="new-todo-button aside-button">New Todo</button>
+                <button class="new-todo-button aside-button">New To-do</button>
                 <dialog id="todo-dialog">
                     <form id="new-todo-form"></form>
 
@@ -71,7 +72,11 @@
         <!-- -------------- Todos Templates -->
         <template id="todo-card-template">
             <div class="todo-card">
-                <h3 class="todo-title"></h3>
+                <div class="todo-header">
+                    <h3 class="todo-title"></h3>
+                    <i class="fa-solid fa-trash todo-delete-button"></i>
+                </div>
+
                 <div class="todo-details disable-display">
                     <p class="todo-description"></p>
                     <p class="todo-due-date"></p>
@@ -81,7 +86,8 @@
                         <label>Done</label>
                     </div>
                 </div>
-                <button class="todo-delete-button">Delete</button>
+
+                <!-- <button class="todo-delete-button">Delete</button> -->
             </div>
         </template>
 

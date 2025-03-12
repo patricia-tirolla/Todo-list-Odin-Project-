@@ -61,7 +61,8 @@ export function displayProjectAndTodoCards() {
         projectCard.addEventListener("click", () => {
             document.querySelectorAll(".project-card").forEach(card => card.classList.remove("project-card-selected"));
             projectCard.classList.add("project-card-selected");
-            selectedProjectIndex = projectIndex;
+            selectedProjectIndex = projectCard.dataset.index;
+            console.log("Project selected:", selectedProjectIndex);
         })
 
         // add a plus button inside each project, to add a new todo
