@@ -18,14 +18,15 @@
         width: 100%;
     }
 
-    button {
+    .project-delete-button {
         border: grey;
         border-radius: 6px;
         margin: 10px;
         padding: 10px 20px;
+        font-size: 1.2em;
     }
 
-    .new-todo-plus-button {
+    .add-todo-plus-button {
         padding: 0 10px;
         font-weight: 400;
         font-size: 2em;
@@ -104,4 +105,14 @@
 
 i:hover {
     box-shadow: var(--shadow-hover);
+    color: var(--hover-red);
+}
+
+.project-delete-button:hover {
+    color: var(--hover-red);
+    font-weight: 900;
+}
+
+.add-todo-plus-button:hover {
+    color: var(--hover-green);
 }

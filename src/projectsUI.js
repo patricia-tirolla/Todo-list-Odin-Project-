@@ -66,7 +66,7 @@ export function displayProjectAndTodoCards() {
         })
 
         // add a plus button inside each project, to add a new todo
-        projectClone.querySelector(".new-todo-plus-button").onclick = () => {
+        projectClone.querySelector(".add-todo-plus-button").onclick = () => {
             const todoModal = document.getElementById("todo-dialog");
             todoModal.show();
         }

@@ -10,6 +10,8 @@
     --dialog-background: #B19B8F;
     --buttons-background-color: #E1D8D5;
     --light-beije: #E1D8D5;
+    --hover-red: rgb(161, 61, 61);
+    --hover-green: rgb(61, 161, 61);
 }
 
 /* ------------------------ GLOBAL */
