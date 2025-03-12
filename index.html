@@ -23,11 +23,12 @@
                 <button class="new-project-button aside-button">New Project</button>
                 <dialog id="project-dialog">
                     <form id="new-project-form">
-                        <label for="project-title">Title</label>
+                        <label for="project-title">Title:</label>
                         <input id="project-title" type="text" name="project-title">
 
-                        <button type="button" id="cancel-project-button" formmethod="dialog">Cancel</button>
-                        <button type="submit" id="add-project-button">Add</button>
+                        <button class="dialog-button" type="button" id="cancel-project-button"
+                            formmethod="dialog">Cancel</button>
+                        <button class="dialog-button" type="submit" id="add-project-button">Add</button>
                     </form>
                 </dialog>
             </section>
@@ -53,16 +54,14 @@
                         <option value="low">Low - do it any time!</option>
                     </select>
 
-                    <button type="button" id="cancel-button" formmethod="dialog">Cancel</button>
-                    <button type="submit" id="add-todo-button">Add</button>
+                    <button class="dialog-button" type="button" id="cancel-button" formmethod="dialog">Cancel</button>
+                    <button class="dialog-button" type="submit" id="add-todo-button">Add</button>
                 </dialog>
             </section>
         </aside>
         <main>
-            <div id="projects-container">
-                <div id="all-projects-container">
-                    <!-- New projects go here -->
-                </div>
+            <div id="all-projects-container">
+                <!-- New projects go here -->
             </div>
         </main>
 
@@ -71,20 +70,17 @@
             <div class="todo-card">
                 <div class="todo-header">
                     <h3 class="todo-title"></h3>
-                    <i class="fa-solid fa-trash todo-delete-button"></i>
+                    <div class="interaction-container">
+                        <i class="fa-solid fa-trash todo-delete-button"></i>
+                        <input class="done" name="done" type="checkbox">
+                    </div>
                 </div>
 
                 <div class="todo-details disable-display">
                     <p class="todo-description"></p>
                     <p class="todo-due-date"></p>
                     <p class="todo-priority"></p>
-                    <div class="status-container">
-                        <input class="done" name="done" type="checkbox">
-                        <label>Done</label>
-                    </div>
                 </div>
-
-                <!-- <button class="todo-delete-button">Delete</button> -->
             </div>
         </template>
 
@@ -93,7 +89,7 @@
             <div class="project-card">
                 <div class="project-header-container">
                     <h2 class="project-title"></h2>
-                    <button class="new-todo-plus-button">+</button>
+                    <button class="add-todo-plus-button">+</button>
                 </div>
                 <div class="todos-list"></div>
                 <button class="project-delete-button">Delete Project</button>
